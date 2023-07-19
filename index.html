@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/sweetalert2.min.css" />
+    <script
+      src="https://kit.fontawesome.com/201e436313.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="marker d-flex justify-content-center">
+        <h2 class="position-relative d-inline-block text-center my-5">
+          Bookmarker
+        </h2>
+      </div>
+      <div class="title d-flex justify-content-center">
+        <i class="fa-solid fa-bookmark fs-3 blue-color mx-2"></i>
+        <h4 class="text-center">Bookmark your favorite sites</h4>
+      </div>
+      <form action="" class="w-75 m-auto">
+        <label for="name" class="form-label"
+          ><i class="fa-solid fa-book-bookmark mx-1"></i>Site name</label
+        >
+        <input type="text" class="form-control mb-3" id="name" />
+        <label for="url" class="form-label"
+          ><i class="fa-solid fa-arrow-up-right-from-square mx-1"></i>Site
+          URL</label
+        >
+        <input type="text" class="form-control mb-5" id="url" />
+        <div class="input-button d-flex justify-content-center">
+          <button
+            type="button"
+            class="btn btn-outline-info rounded-pill m-auto mb-5"
+            onclick="addBookmark()"
+            id="add"
+          >
+            Add Bookmark
+          </button>
+        </div>
+        <input
+          type="text"
+          class="form-control mb-5"
+          onkeyup="searchBookmark(this.value)"
+          placeholder="Search"
+        />
+      </form>
+      <table class="table w-75 m-auto my-4 table-striped">
+        <thead>
+          <th>index</th>
+          <th>Website Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+          <th>Update</th>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <script src="js/sweetalert2.min.js"></script>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

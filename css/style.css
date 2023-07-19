@@ -1,0 +1,83 @@
+/* 
+font-family: 'Merriweather', serif;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+
+:root {
+  --main-color: #f4d160;
+  --high-color: #fbeeac;
+  --back-color: #1d5d9b;
+  --second-color: #75c2f6;
+}
+
+.blue-color {
+  color: var(--second-color);
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #f9f5f6;
+}
+h2,
+h4 {
+  font-family: "Merriweather", serif;
+}
+.form-label {
+  color: var(--back-color);
+}
+
+.form-control:focus {
+  border-color: var(--high-color);
+
+  box-shadow: 0 0 3px 0.2rem var(--high-color);
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffe569;
+  z-index: -1;
+  animation: mark 2s 1s infinite ease-in-out;
+  -webkit-animation: mark 2s 1s infinite ease-in-out;
+}
+
+@keyframes mark {
+  0% {
+    width: 10%;
+  }
+  20% {
+    width: 30%;
+  }
+  40% {
+    width: 50%;
+  }
+  60% {
+    width: 70%;
+  }
+  80% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.table > :not(caption) > * > * {
+  color: var(--back-color);
+}
+
+.swal2-popup {
+  background-color: var(--main-color);
+}
+.swal2-title {
+  color: var(--back-color);
+}
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+  background-color: var(--second-color);
+}
+div:where(.swal2-container) button:where(.swal2-styled) {
+  box-shadow: 0 0 0 3px var(--back-color);
+}
